@@ -62,9 +62,21 @@
           } elseif ($_SESSION['role'] == "Teacher") { /////////////////////// Teacher sidebar
         ?> 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
+            <a class="nav-link" href="index.php">
+              <span class="menu-title">Home</span>
+               <i class="mdi mdi-home menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../teacherAttendance/teacherAttendance.php">
               <span class="menu-title">Attendance</span>
-              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+               <i class="mdi mdi-camera menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../teacherAttendance/sample.php">
+              <span class="menu-title">Sample</span>
+               <i class="mdi mdi-camera menu-icon"></i>
             </a>
           </li>
           <li class="nav-item">
@@ -76,6 +88,7 @@
         <?php
           } elseif ($_SESSION['role'] == "Student") { /////////////////////// Teacher sidebar
             ?> 
+              
               <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
                   <span class="menu-title">Attendance Summary</span>

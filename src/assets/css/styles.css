@@ -1,99 +1,116 @@
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .header {
-            text-align: center;
-            padding: 10px;
-            background-color: #CC3333;
-            color: white;
-            font-size: 28px;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .panel {
-            width: 20%;
-            padding: 10px;
-            background-color: white;
-            border: 1px solid #ccc;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-right: 10px; /* Added margin for spacing */
-            text-decoration: none; /* Remove underline */
-            color: black; /* Text color */
-            transition: background-color 0.3s; /* Transition for hover effect */
-        }
-
-        .panel:last-child {
-            margin-right: 0; /* Remove margin for the last panel */
-        }
-
-        .main-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .left-panel, .right-panel {
-            height: 400px;
-            background-color: white;
-            border: 2px solid #333;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .left-panel {
-            width: 60%; /* Adjust width */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            background-color: #eaeaea;
-            text-align: center;
-            margin-left: 85px;
-            border: 40px solid #333;
-        }
-
-        .right-panel {
-            width: 30%; /* Adjust width */
-            overflow-y: auto;
-            padding: 15px;
-            border: 30px solid #333;
-            margin-right: 85px; /* Adjust margin for closeness */
-            
-        }
-
-        .summary-panel {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: white;
-            border: 1px solid #ccc;
-            text-align: center;
-            height: 100px; /* Same height as previous footer */
-            max-width: 85%; 
-        }
-
-        .content-container {
-            margin: 20px auto;
-            max-width: 85%; /* Set max width for the content container */
-        }
-
-
-
-
-.attendance-table-container {
-    margin: 20px auto;
-    max-width: 85%; /* Match the content container width */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
+/* Flex container for header and home button */
+.header-container {
+    display: flex;
+    align-items: center; /* Vertically centers the header and home button */
+    padding: 20px;
+    background-color: #CC3333;
+    justify-content: space-between; /* Aligns the header and the attendance summary on the same line */
+}
+
+/* Header text */
+.header {
+    font-size: 28px;
+    color: white;
+    margin-left: 20px; /* Adds space between the home button and header */
+}
+
+/* Home button styling */
+.home-button {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    padding: 10px 15px; /* Adds padding for the button */
+    background-color: white; /* Optional: give a background color to the button */
+    border-radius: 5px; /* Optional: add rounded corners */
+    margin-top: 5px; /* Adjust this value to move the button down */
+}
+
+/* Three Panel Options */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.panel {
+    width: 20%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.panel:last-child {
+    margin-right: 0;
+}
+
+/* Main Container for Left and Right Panels */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.left-panel, .right-panel {
+    height: 400px;
+    background-color: white;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #eaeaea;
+    text-align: center;
+    margin-left: 85px;
+    border: 40px solid #333;
+}
+
+.right-panel {
+    width: 30%;
+    overflow-y: auto;
+    padding: 15px;
+    border: 30px solid #333;
+    margin-right: 85px;
+}
+
+/* Attendance Summary Table and Header Alignment */
+.attendance-table-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns the table header to the right */
+    margin: 0 85px 20px 85px;
+    background-color: #CC3333; /* Optional background color for consistency */
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.attendance-table-container h3 {
+    font-size: 24px;
+    margin: 0; /* Ensures the header has no unnecessary margin */
+}
+
+/* Attendance Table Styling */
 .attendance-table {
     width: 100%;
     border-collapse: collapse;
@@ -116,10 +133,10 @@
 }
 
 .attendance-table tr:hover {
-    background-color: #e0e0e0; /* Highlight row on hover */
+    background-color: #e0e0e0;
 }
 
 .attendance-table a {
     color: #CC3333;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }

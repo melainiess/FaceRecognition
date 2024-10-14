@@ -71,14 +71,14 @@
               <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white me-2">
                   <i class="mdi mdi-home"> </i> 
-                </span> Attendance 
+                </span> Home
               </h3>
 
     
             </div>
             
             <div class="row">
-               <?php include '../teacherAttendance/teacherAttendance.php' ?>
+               <?php include '../teacherAttendance/attendanceMain.php' ?>
             
           </div>
           <!-- content-wrapper ends -->
